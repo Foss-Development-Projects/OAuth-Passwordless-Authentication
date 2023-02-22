@@ -4,6 +4,7 @@ const pug = require('koa-pug')
 const serve = require('koa-static')
 const route = require('@koa/router')
 const cors = require('@koa/cors')
+const oauth = require('oauth')
 const path = require('path')
 
 
@@ -20,7 +21,6 @@ App.use(serve(path.join(__dirname, './assets')))
 router.get("/", async (ctx, next) => {
 	await ctx.render("index.pug")
 })
-
 
 App.use(router.routes())
 App.use(router.allowedMethods());
