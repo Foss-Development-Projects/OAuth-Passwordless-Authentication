@@ -7,13 +7,13 @@ block content
 		.profile-container
 			.card
 				.card-image
-					img.card-profile-image(src="./images/user.png")
+					img.card-profile-image(src="./images/card-user.png")
 
 				.card-details
-					h1 Name: name
-					h3 Username: username
-					h3 Email: email
+					h4 Name : #{user.name}
+					h4 Username : #{user.username}
+					h4 Email : #{user.email}
 
 				.card-buttons
-					button(type="submit") Logout
-					button(type="submit") Delete
+					button.logout-button(type="submit") Logout
+					button.delete-button(type="submit") Delete

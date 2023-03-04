@@ -6,6 +6,7 @@ specifiers:
   dotenv: ^16.0.3
   googleapis: ^112.0.0
   koa: ^2.14.1
+  koa-json: ^2.0.2
   koa-pug: ^5.1.0
   koa-static: ^5.0.0
   nodemon: ^2.0.21
@@ -17,6 +18,7 @@ dependencies:
   dotenv: registry.npmjs.org/dotenv/16.0.3
   googleapis: registry.npmjs.org/googleapis/112.0.0
   koa: registry.npmjs.org/koa/2.14.1
+  koa-json: registry.npmjs.org/koa-json/2.0.2
   koa-pug: registry.npmjs.org/koa-pug/5.1.0
   koa-static: registry.npmjs.org/koa-static/5.0.0
   oauth: registry.npmjs.org/oauth/0.10.0
@@ -294,6 +296,12 @@ packages:
     dependencies:
       depd: registry.npmjs.org/depd/2.0.0
       keygrip: registry.npmjs.org/keygrip/1.1.0
+    dev: false
+
+  registry.npmjs.org/core-util-is/1.0.3:
+    resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.3.tgz}
+    name: core-util-is
+    version: 1.0.3
     dev: false
 
   registry.npmjs.org/debug/3.2.7:
@@ -767,6 +775,12 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  registry.npmjs.org/isarray/1.0.0:
+    resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz}
+    name: isarray
+    version: 1.0.0
+    dev: false
+
   registry.npmjs.org/js-stringify/1.0.2:
     resolution: {integrity: sha512-rtS5ATOo2Q5k1G+DADISilDA6lv79zIiwFd6CcjuIxGKLFm5C+RLImRscVap9k55i+MOZwgliw+NejvkLuGD5g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/js-stringify/-/js-stringify-1.0.2.tgz}
     name: js-stringify
@@ -779,6 +793,12 @@ packages:
     version: 1.0.0
     dependencies:
       bignumber.js: registry.npmjs.org/bignumber.js/9.1.1
+    dev: false
+
+  registry.npmjs.org/json-stringify-safe/5.0.1:
+    resolution: {integrity: sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz}
+    name: json-stringify-safe
+    version: 5.0.1
     dev: false
 
   registry.npmjs.org/jstransformer/1.0.0:
@@ -832,6 +852,21 @@ packages:
     dependencies:
       co: registry.npmjs.org/co/4.6.0
       koa-compose: registry.npmjs.org/koa-compose/4.1.0
+    dev: false
+
+  registry.npmjs.org/koa-is-json/1.0.0:
+    resolution: {integrity: sha512-+97CtHAlWDx0ndt0J8y3P12EWLwTLMXIfMnYDev3wOTwH/RpBGMlfn4bDXlMEg1u73K6XRE9BbUp+5ZAYoRYWw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/koa-is-json/-/koa-is-json-1.0.0.tgz}
+    name: koa-is-json
+    version: 1.0.0
+    dev: false
+
+  registry.npmjs.org/koa-json/2.0.2:
+    resolution: {integrity: sha512-8+dz0T2ekDuNN1svYoKPCV2txotQ3Ufg8Fn5bft1T48MPJWiC/HKmkk+3xj9EC/iNZuFYeLRazN2h2o3RSUXuQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/koa-json/-/koa-json-2.0.2.tgz}
+    name: koa-json
+    version: 2.0.2
+    dependencies:
+      koa-is-json: registry.npmjs.org/koa-is-json/1.0.0
+      streaming-json-stringify: registry.npmjs.org/streaming-json-stringify/3.1.0
     dev: false
 
   registry.npmjs.org/koa-pug/5.1.0:
@@ -1124,6 +1159,12 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  registry.npmjs.org/process-nextick-args/2.0.1:
+    resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz}
+    name: process-nextick-args
+    version: 2.0.1
+    dev: false
+
   registry.npmjs.org/promise/7.3.1:
     resolution: {integrity: sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/promise/-/promise-7.3.1.tgz}
     name: promise
@@ -1262,6 +1303,20 @@ packages:
       side-channel: registry.npmjs.org/side-channel/1.0.4
     dev: false
 
+  registry.npmjs.org/readable-stream/2.3.8:
+    resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.8.tgz}
+    name: readable-stream
+    version: 2.3.8
+    dependencies:
+      core-util-is: registry.npmjs.org/core-util-is/1.0.3
+      inherits: registry.npmjs.org/inherits/2.0.4
+      isarray: registry.npmjs.org/isarray/1.0.0
+      process-nextick-args: registry.npmjs.org/process-nextick-args/2.0.1
+      safe-buffer: registry.npmjs.org/safe-buffer/5.1.2
+      string_decoder: registry.npmjs.org/string_decoder/1.1.1
+      util-deprecate: registry.npmjs.org/util-deprecate/1.0.2
+    dev: false
+
   registry.npmjs.org/readdirp/3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/readdirp/-/readdirp-3.6.0.tgz}
     name: readdirp
@@ -1290,6 +1345,12 @@ packages:
       is-core-module: registry.npmjs.org/is-core-module/2.11.0
       path-parse: registry.npmjs.org/path-parse/1.0.7
       supports-preserve-symlinks-flag: registry.npmjs.org/supports-preserve-symlinks-flag/1.0.0
+    dev: false
+
+  registry.npmjs.org/safe-buffer/5.1.2:
+    resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz}
+    name: safe-buffer
+    version: 5.1.2
     dev: false
 
   registry.npmjs.org/safe-buffer/5.2.1:
@@ -1355,6 +1416,23 @@ packages:
     name: statuses
     version: 2.0.1
     engines: {node: '>= 0.8'}
+    dev: false
+
+  registry.npmjs.org/streaming-json-stringify/3.1.0:
+    resolution: {integrity: sha512-axtfs3BDxAsrZ9swD163FBrXZ8dhJJp6kUI6C97TvUZG9RHKfbg9nFbXqEheFNOb3IYMEt2ag9F62sWLFUZ4ug==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/streaming-json-stringify/-/streaming-json-stringify-3.1.0.tgz}
+    name: streaming-json-stringify
+    version: 3.1.0
+    dependencies:
+      json-stringify-safe: registry.npmjs.org/json-stringify-safe/5.0.1
+      readable-stream: registry.npmjs.org/readable-stream/2.3.8
+    dev: false
+
+  registry.npmjs.org/string_decoder/1.1.1:
+    resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz}
+    name: string_decoder
+    version: 1.1.1
+    dependencies:
+      safe-buffer: registry.npmjs.org/safe-buffer/5.1.2
     dev: false
 
   registry.npmjs.org/supports-color/5.5.0:
@@ -1444,6 +1522,12 @@ packages:
     resolution: {integrity: sha512-XdVKMF4SJ0nP/O7XIPB0JwAEuT9lDIYnNsK8yGVe43y0AWoKeJNdv3ZNWh7ksJ6KqQFjOO6ox/VEitLnaVNufw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/url-template/-/url-template-2.0.8.tgz}
     name: url-template
     version: 2.0.8
+    dev: false
+
+  registry.npmjs.org/util-deprecate/1.0.2:
+    resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz}
+    name: util-deprecate
+    version: 1.0.2
     dev: false
 
   registry.npmjs.org/uuid/9.0.0:

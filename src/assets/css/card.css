@@ -1,11 +1,84 @@
+:root {
+	--card-border-radius: 20px;
+	--button-font-size: 20px;
+}
 .card {
-	max-width: 400px;
+	width: 450px;
+	box-shadow: 0 0 10px white;
+	border: 1px solid floralwhite;
+	background-color: rgba(255,255,255,0.1);
+	border-radius: var(--card-border-radius);
+	backdrop-filter: blur(5px);
 }
 .card-image {
-	background-image: url("./images/");
+	background-image: url("./../images/card-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	display: flex;
+	border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
 }
 .card-profile-image {
-
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%;
 }
-.card-details {}
-.card-buttons {}
+.card-details {
+	padding: 10px;
+	font-family: "Playfair Display", sans-serif;
+}
+.card-buttons {
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
+	justify-content: space-between;
+	align-items: center;
+}
+.card-buttons button {
+	font-size: var(--button-font-size);
+	font-weight: 600;
+	color: white;
+	font-family: "Open Sans", sans-serif;
+	padding: 10px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: none;
+	border-radius: calc(var(--card-border-radius) + 50px);
+	transition: box-shadow 200ms ease-in-out;
+}
+.card-buttons button:hover {
+	box-shadow: 0 0 10px whitesmoke;
+	transition: box-shadow 200ms ease-in-out;
+}
+
+.card-buttons .delete-button {
+	background:linear-gradient(45deg, yellow ,orangered);
+}
+
+.card-buttons .logout-button {
+	background:linear-gradient(45deg, indigo , pink);
+}
+
+@media (max-width: 1000px) {
+	.card {
+		width: 400px;
+	}
+}
+@media (max-width: 500px) {
+	.card {
+		width: 350px;
+	}
+}
+
+@media (max-width: 350px) {
+	.card {
+		width: 250px;
+	}
+}
