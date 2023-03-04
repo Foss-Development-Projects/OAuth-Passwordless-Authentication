@@ -6,7 +6,7 @@ const route = require('@koa/router')
 const cors = require('@koa/cors')
 const oauth = require('oauth')
 const path = require('path')
-
+const { google } = require('googleapis')
 
 const App = new koa();
 const Pug = new pug({
@@ -19,9 +19,11 @@ App.use(serve(path.join(__dirname, './assets')))
 
 
 router.get("/", async (ctx, next) => {
-	await ctx.render("index.pug")
+	await ctx.render("pages/index.pug")
 })
-
+router.get("/profile", async (ctx, next) => {
+	await ctx.render("pages/account.pug")
+})
 App.use(router.routes())
 App.use(router.allowedMethods());
 App.listen(process.env.PORT, () => {

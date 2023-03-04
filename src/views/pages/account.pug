@@ -1,0 +1,19 @@
+extends ./../layout/base.pug
+
+block content
+	.container
+		.navbar-container
+			include ../shared/navbar.pug
+		.profile-container
+			.card
+				.card-image
+					img.card-profile-image(src="./images/user.png")
+
+				.card-details
+					h1 Name: name
+					h3 Username: username
+					h3 Email: email
+
+				.card-buttons
+					button(type="submit") Logout
+					button(type="submit") Delete

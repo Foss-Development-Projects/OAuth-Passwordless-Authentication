@@ -1,0 +1,47 @@
+:root {
+	--navbar-color: indigo;
+}
+.navbar-container {
+	width: 100%;
+}
+.navbar {
+	background-color: var(--navbar-color);
+	width: 100%;
+}
+.navbar-list {
+	display: grid;
+	grid-gap: 10px;
+	padding: 5px 10px;
+	grid-template-columns: 1fr 50px 1fr;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+li {
+	list-style: none;
+	text-align: center;
+}
+.nav-link {
+	color: white;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+	display: inline-block;
+	border-radius: 30px;
+	background-color: transparent;
+	border: 1px solid white;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: "Gill sans", sans-serif;
+	transition: background-color, 200ms ease-in-out;
+}
+.logo {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+.nav-link:hover {
+	transition: background-color, 200ms ease-in-out;
+	background-color: rgba(0, 0, 0, 0.8);
+}

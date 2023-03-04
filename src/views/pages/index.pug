@@ -1,0 +1,12 @@
+extends ./../layout/base.pug
+
+block content
+	.container
+		.navbar-container
+			include ../shared/navbar.pug
+		.oauth-container
+			form(action="/" method="POST")
+				section
+					button(type="Submit" value="SSO")
+						p Sign In With Google
+						img(src="./images/google.png" alt="Google Logo")
