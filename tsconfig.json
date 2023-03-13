@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"alwaysStrict": true,
+		"module": "NodeNext",
+		"moduleResolution": "nodenext",
+		"outDir": "./dist"
+	},
+	"include": ["./src/**"],
+	"exclude": ["node_modules", ".git"]
+}

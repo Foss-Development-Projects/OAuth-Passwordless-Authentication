@@ -2,6 +2,12 @@
 @import url("./navbar.css");
 @import url("./card.css");
 
+:root {
+	--default-text-color: white;
+	--google-button-bg-color: linear-gradient(-45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+	--disabled-overlay-color: rgba(0,0,0,0.8);
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -14,15 +20,16 @@ html {
 }
 
 body {
-	background-image: url("./../images/bg.jpg");
+	background-image: url("./../images/security.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
-	color: white;
+	color: var(--default-text-color);
 	width: 100%;
 	height: 100%;
 }
+
 .container {
 	height: inherit;
 	width: inherit;
@@ -30,66 +37,65 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+
 .navbar-container {
 	position: fixed;
 	top: 0;
 	display: flex;
 	justify-content: space-around;
 }
-.google-button {
-	display: flex;
+.sso-buttons {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 10px;
+	justify-content: center;
 	align-items: center;
+
+}
+.sso-button {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: 1fr 30px;
 	outline: none;
 	padding: 10px;
+	grid-gap: 5px;
 	border-radius: 100px;
 	border: none;
-	color: whitesmoke;
-	background: linear-gradient(45deg, rebeccapurple, purple);
-	justify-content: center;
+	color: inherit;
+	background: var(--google-button-bg-color);
 	cursor: pointer;
-	box-shadow: 0 0 0px transparent;
-	transition: box-shadow, 300ms rebeccapurple;
+	box-shadow: 0 0 0px black;
+	transition: backdrop-filter, box-shadow, 300ms ease-out;
+	position: relative;
 }
 
-.google-button:hover {
-	border: 1px solid purple;
-	animation: animate-button;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+.sso-button:hover {
+	box-shadow: 0 0 10px black;
+	transition: backdrop-filter, box-shadow, 300ms ease-out;
+	backdrop-filter: blur(3px);
 }
 
-.google-button img {
+.sso-button img {
 	width: 24px;
 	height: 24px;
-	object-fit: cover;
 	margin-left: 5px;
+	object-fit: cover;
 }
 
-.google-button p {
+.sso-button p {
+	text-align: left;
 	font-size: 18px;
 	font-weight: bolder;
 	font-family: "Roboto", sans-serif;
 }
-
-@keyframes animate-button {
-	0% {
-		box-shadow: 0 0 10px pink;
-	}
-
-	25% {
-		box-shadow: 0 0 15px pink;
-	}
-
-	50% {
-		box-shadow: 0 0 30px pink;
-	}
-
-	75% {
-		box-shadow: 0 0 15px pink;
-	}
-
-	100% {
-		box-shadow: 0 0 10px pink;
-	}
+.disabled::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: var(--disabled-overlay-color);
+	position: absolute;
+	border-radius: 100px;
+	top: 0;
+	left: 0;
 }

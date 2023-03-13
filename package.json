@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "OAuth Authentication",
   "main": "src/app.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon ./src/app.js",
-    "start": "node ./src/app.js"
+    "start": "node ./src/app.js",
+    "watch": "tsx watch ./src/app.ts"
   },
   "keywords": [],
   "author": "Foss",
@@ -13,6 +15,12 @@
   "dependencies": {
     "@koa/cors": "^4.0.0",
     "@koa/router": "^12.0.0",
+    "@types/koa": "^2.13.5",
+    "@types/koa-json": "^2.0.20",
+    "@types/koa-static": "^4.0.2",
+    "@types/koa__router": "^12.0.0",
+    "@types/node": "^18.15.0",
+    "@types/pug": "^2.0.6",
     "dotenv": "^16.0.3",
     "googleapis": "^112.0.0",
     "koa": "^2.14.1",
@@ -22,6 +30,8 @@
     "oauth": "^0.10.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.21"
+    "nodemon": "^2.0.21",
+    "tsx": "^3.12.4",
+    "typescript": "^4.9.5"
   }
 }

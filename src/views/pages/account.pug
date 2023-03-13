@@ -10,10 +10,16 @@ block content
 					img.card-profile-image(src="./images/card-user.png")
 
 				.card-details
-					h4 Name : #{user.name}
-					h4 Username : #{user.username}
-					h4 Email : #{user.email}
+					.info
+						h4 Name
+						p #{user.name}
+					.info
+						h4 Username
+						p #{user.username}
+					.info
+						h4 Email
+						p #{user.email}
 
-				.card-buttons
-					button.logout-button(type="submit") Logout
-					button.delete-button(type="submit") Delete
+				form(action="/profile" method="POST").card-buttons
+					button.logout-button(type="submit" formaction="profile/logout") Logout
+					button.delete-button(type="submit" formaction="profile/delete") Delete
