@@ -1,5 +1,5 @@
 :root {
-	--navbar-color: darkcyan;
+	--navbar-color: rgba(0,0,0,0.5);
 }
 .navbar-container {
 	width: 100%;
@@ -7,6 +7,7 @@
 .navbar {
 	background-color: var(--navbar-color);
 	width: 100%;
+	backdrop-filter: blur(3px);
 }
 .navbar-list {
 	display: grid;
@@ -43,5 +44,5 @@ li {
 }
 .nav-link:hover {
 	transition: background-color, 200ms ease-in-out;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 250, 0.2);
 }

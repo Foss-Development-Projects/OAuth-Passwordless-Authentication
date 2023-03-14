@@ -1,0 +1,29 @@
+extends ./../layout/base.pug
+
+block content
+	.container
+		.navbar-container
+			include ../shared/navbar.pug
+		.oauth-container
+			.switch-tab
+				a.signin.activated#signin(href="signin") Sign In
+				a.signup#signup(href="signup") Sign Up
+			form(action="/signin" method="POST")
+				section.sso-buttons
+					button.sso-button(type="Submit" value="SSO" formaction="/signin/google")
+						p Sign In With Google
+						img(src="./images/google.png" alt="Google Logo")
+
+					button.disabled.sso-button(type="Submit" value="SSO" formaction="/signin/twitter")
+						p Sign In With Twitter
+						img(src="./images/twitter.png" alt="Twitter Logo")
+
+					button.disabled.sso-button(type="Submit" value="SSO" formaction="/signin/facebook")
+						p Sign In With Facebook
+						img(src="./images/facebook.png" alt="Facebook Logo")
+
+					button.disabled.sso-button(type="Submit" value="SSO" formaction="/signin/microsoft")
+						p Sign In With Microsoft
+						img(src="./images/microsoft.png" alt="Microsoft Logo")
+block script
+	script(src="./js/main.js" defer=true)

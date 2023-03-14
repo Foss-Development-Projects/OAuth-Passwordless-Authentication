@@ -2,14 +2,13 @@ const renderHomePage = async (ctx, next) => {
 	await ctx.render("pages/index.pug")
 }
 
-const twitterOAuth = async (ctx: any, next) => {
-	ctx.body = 'Twitter OAuth Is Coming Soon'
-}
-const microsoftOAuth = async (ctx: any, next) => {
-	ctx.body = 'MicroSoft OAuth Is Coming Soon'
-}
-const facebookOAuth = async (ctx: any, next) => {
-	ctx.body = 'Facebook OAuth Is Coming Soon'
+const renderSignInTab = async (ctx, next) => {
+	await ctx.render("pages/signin.pug")
 }
 
-export { renderHomePage, twitterOAuth, microsoftOAuth, facebookOAuth }
+const renderSignUpTab = async (ctx, next) => {
+	await ctx.render("pages/signup.pug")
+}
+
+
+export { renderHomePage, renderSignInTab, renderSignUpTab };

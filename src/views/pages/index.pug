@@ -5,20 +5,8 @@ block content
 		.navbar-container
 			include ../shared/navbar.pug
 		.oauth-container
-			form(action="/" method="POST")
-				section.sso-buttons
-					button.sso-button(type="Submit" value="SSO" formaction="/google")
-						p Sign In With Google
-						img(src="./images/google.png" alt="Google Logo")
-
-					button.disabled.sso-button(type="Submit" value="SSO" formaction="/twitter")
-						p Sign In With Twitter
-						img(src="./images/twitter.png" alt="Twitter Logo")
-
-					button.disabled.sso-button(type="Submit" value="SSO" formaction="/facebook")
-						p Sign In With Facebook
-						img(src="./images/facebook.png" alt="Facebook Logo")
-
-					button.disabled.sso-button(type="Submit" value="SSO" formaction="/microsoft")
-						p Sign In With Microsoft
-						img(src="./images/microsoft.png" alt="Microsoft Logo")
+			.switch-tab
+				a.signin#signin(href="signin") Sign In
+				a.signup#signup(href="signup") Sign Up
+block script
+	script(src="./js/main.js" defer=true)
