@@ -1,5 +1,9 @@
-const googleOAuth = async (ctx: any, next) => {
- ctx.body = "Working"
+const googleOAuthSignin = async (ctx: any, next) => {
+ ctx.body = "Google OAuth 2.0 Signin"
 }
 
-export default googleOAuth;
+const googleOAuthSignup = async (ctx: any, next) => {
+ ctx.body = "Google OAuth 2.0 Signup"
+}
+
+export { googleOAuthSignin, googleOAuthSignup };

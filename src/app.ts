@@ -11,6 +11,9 @@ import serve from 'koa-static';
 
 import homeRoutes from './routes/homeRoute';
 import profileRoutes from './routes/profileRoute';
+import signinRoutes from './routes/signinRoute';
+import signupRoutes from './routes/signupRoute';
+
 import server from './configs/server';
 import { sessionConfig } from './configs/session';
 
@@ -29,8 +32,9 @@ App.use(json())
 App.use(Session(sessionConfig, App))
 App.use(serve(path.join(__dirname, './assets')))
 App.use(serve(path.join(__dirname, '../', './public')))
-
 App.use(homeRoutes.routes())
+App.use(signinRoutes.routes())
+App.use(signupRoutes.routes())
 App.use(profileRoutes.routes())
 App.use(router.routes())
 App.use(router.allowedMethods());

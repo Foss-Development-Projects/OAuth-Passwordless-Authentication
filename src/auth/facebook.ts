@@ -1,5 +1,9 @@
-const facebookOAuth = async (ctx: any, next) => {
-	ctx.body = 'Facebook OAuth Is Coming Soon'
+const facebookOAuthSignin = async (ctx: any, next) => {
+	ctx.body = "Facebook OAuth 2.0 Signin"
+}
+const facebookOAuthSignup = async (ctx: any, next) => {
+	ctx.body = "Facebook OAuth 2.0 Signup"
 }
 
-export default facebookOAuth;
+
+export { facebookOAuthSignin, facebookOAuthSignup };

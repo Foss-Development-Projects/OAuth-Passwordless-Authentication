@@ -1,5 +1,6 @@
 @import url('./modules/fonts.css');
 @import url("./modules/navbar.css");
+@import url("./modules/footer.css");
 @import url("./modules/card.css");
 @import url("./modules/tab.css");
 
@@ -51,7 +52,6 @@ body {
 	grid-gap: 10px;
 	justify-content: center;
 	align-items: center;
-
 }
 .sso-button {
 	display: grid;
@@ -69,6 +69,7 @@ body {
 	box-shadow: 0 0 0px black;
 	transition: backdrop-filter, box-shadow, 300ms ease-out;
 	position: relative;
+	font-family: "Lato", sans-serif;
 }
 
 .sso-button:hover {

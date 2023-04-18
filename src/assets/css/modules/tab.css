@@ -1,5 +1,5 @@
 :root {
-	--button-bg-color:#223078;
+	--button-bg-color:darkblue;
 }
 .switch-tab {
 	width: 100%;
@@ -10,13 +10,15 @@
 	grid-template-columns: repeat(2, 1fr);
 	margin-bottom: 15px;
 	border-radius: 100px;
-	padding: 3px 2.5px 2.5px 2.5px;
+	padding: 2.5px 3px 3px 3px;
 }
 .switch-tab > a {
-	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 10px;
 	font-size: 24px;
-	font-family: "Open Sans";
+	font-family: "Lato", sans-serif;
 	color: whitesmoke;
 	text-align: center;
 	text-decoration: none;
