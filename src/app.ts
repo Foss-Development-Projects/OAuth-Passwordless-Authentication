@@ -8,6 +8,7 @@ import json from 'koa-json';
 import Session from 'koa-session'
 import cors from '@koa/cors';
 import serve from 'koa-static';
+import passport from 'koa-passport'
 
 import homeRoutes from './routes/homeRoute';
 import profileRoutes from './routes/profileRoute';
@@ -27,6 +28,8 @@ const Pug = new KoaPug({
 })
 const router = new Router();
 App.keys = [`${process.env.SESSION_KEY}`]
+App.use(passport.initialize())
+App.use(passport.session())
 App.use(cors())
 App.use(json())
 App.use(Session(sessionConfig, App))

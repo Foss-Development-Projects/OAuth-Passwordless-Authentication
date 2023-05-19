@@ -6,7 +6,7 @@ const renderProfilePage = async (ctx: any, _: any) => {
 		email: "foster@foster.com"
 	}
 	if (auth) {
-		await ctx.render("pages/account.pug", { user: obj })
+		await ctx.render("pages/account.pug", { user: ctx.session.user })
 	}
 	else {
 		ctx.body = { error: "Access Denied" }

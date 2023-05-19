@@ -7,12 +7,15 @@ block content
 		.profile-container
 			.card
 				.card-image
-					img.card-profile-image(src="./images/card-user.png")
+					if (user === undefined || user === null)
+						img.card-profile-image(src="./images/card-user.png")
+					else
+						img.card-profile-image(src= user.picture)
 
 				.card-details
 					.info
 						h4 Name
-						p #{user.name}
+						p #{user.displayName}
 					.info
 						h4 Username
 						p #{user.username}

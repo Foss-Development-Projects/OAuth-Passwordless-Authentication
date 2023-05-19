@@ -1,5 +1,10 @@
+import Router from '@koa/router'
+
+const router = new Router();
+
+
 const googleOAuthSignin = async (ctx: any, next) => {
- ctx.body = "Google OAuth 2.0 Signin"
+ router.redirect("/")
 }
 
 const googleOAuthSignup = async (ctx: any, next) => {
